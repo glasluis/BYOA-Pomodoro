@@ -1,0 +1,127 @@
+:root {
+    --work-gradient: linear-gradient(135deg, #f5f7fa 0%, #e4e9f2 100%);
+    --work-text: #2d3748;
+    --work-accent: #4a5568;
+    
+    --rest-gradient: linear-gradient(135deg, #e0f4ff 0%, #d5e8ff 100%);
+    --rest-text: #1a365d;
+    --rest-accent: #2c5282;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: var(--work-gradient);
+    transition: background 0.5s ease;
+}
+
+body.rest-mode {
+    background: var(--rest-gradient);
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    min-width: 320px;
+    transition: box-shadow 0.3s ease;
+}
+
+h1 {
+    color: var(--work-text);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.rest-mode h1 {
+    color: var(--rest-text);
+}
+
+.timer {
+    font-size: 5rem;
+    font-weight: 700;
+    margin: 2rem 0;
+    color: var(--work-text);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -2px;
+    transition: color 0.3s ease;
+}
+
+.rest-mode .timer {
+    color: var(--rest-text);
+}
+
+.controls {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.controls button {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    min-width: 120px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.controls button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.controls button:active {
+    transform: translateY(1px);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+#start {
+    background-color: #4CAF50;
+}
+
+#start:hover {
+    background-color: #45a049;
+}
+
+#reset {
+    background-color: #ff4444;
+}
+
+#reset:hover {
+    background-color: #cc0000;
+}
+
+#toggle-mode {
+    transition: all 0.3s ease;
+}
+
+.mode {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    color: var(--work-accent);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    background-color: #f7fafc;
+    border-radius: 8px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.rest-mode .mode {
+    color: var(--rest-accent);
+    background-color: #ebf8ff;
+} 
